@@ -1,0 +1,138 @@
+name: OpenSourceTools
+version: '${project.version}'
+main: cn.gtb520.tools.main.main
+api-version: '1.20'
+authors: [ Open Source ]
+description: 开源工具包
+depend:
+  - PlaceholderAPI.jar
+commands:
+  feed:
+    aliases: [eat]
+    description: 恢复饱食度
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+  heal:
+    description: 恢复血量
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+  spawn:
+    description: 返回主城
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+  tpa:
+    description: 传送请求
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+  back:
+    description: 返回死亡点
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+  tpaaccept:
+    description: 接受传送请求
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+  tpadefuse:
+    description: 拒绝传送请求
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+  testGUI:
+    description: 测试GUI命令
+    permission: OpenTools.testGUI
+    permission-message: §c§l权限不足
+  CTReload:
+    description: 重载插件
+    permission: OpenTools.reload
+    permission-message: §c§l权限不足
+  stop:
+    description: 关闭服务器
+    permission: OpenTools.stop
+    permission-message: §c§l权限不足
+  gamemode:
+    aliases: [gm]
+    description: 更改游戏模式
+    permission: OpenTools.gamemode
+    permission-message: §c§l权限不足
+  sun:
+    description: 一键晴天
+    permission: OpenTools.sun
+    permission-message: §c§l权限不足
+  setspawn:
+    description: 设置主城位置
+    permission: OpenTools.setspawn
+    permission-message: §c§l权限不足
+  day:
+    description: 一键天亮
+    permission: OpenTools.day
+    permission-message: §c§l权限不足
+  vanish:
+    aliases: [v]
+    description: 隐身
+    permission: OpenTools.vanish
+    permission-message: §c§l权限不足
+  fly:
+    description: 飞行
+    permission: OpenTools.fly
+    permission-message: §c§l权限不足
+  mute:
+    description: 禁言
+    permission: OpenTools.mute
+    permission-message: §c§l权限不足
+  unmute:
+    description: 解除禁言
+    permission: OpenTools.unmute
+    permission-message: §c§l权限不足
+  kick:
+    description: 更好的踢出
+    permission: OpenTools.kick
+    permission-message: §c§l权限不足
+  list:
+    description: 服务器属性
+    permission: OpenTools.list
+    permission-message: §c§l权限不足
+    aliases: [tps]
+  PlayerTitle:
+    description: 称号系统
+    permission: OpenTools.default
+    permission-message: §c§l权限不足
+    aliases: [plt]
+permissions:
+  OpenTools.default:
+    description: 默认拥有的权限
+    default: true
+  OpenTools.kick:
+    description: kick命令的权限
+    default: op
+  OpenTools.mute:
+    description: mute命令的权限
+    default: op
+  OpenTools.unmute:
+    description: unmute命令的权限
+    default: op
+  OpenTools.fly:
+    description: fly命令的权限
+    default: op
+  OpenTools.vanish:
+    description: unmute命令的权限
+    default: op
+  OpenTools.reload:
+    description: ctreload命令的权限
+    default: op
+  OpenTools.sun:
+    description: sun命令的权限
+    default: op
+  OpenTools.stop:
+    description: stop命令的权限
+    default: op
+  OpenTools.gamemode:
+    description: gamemode命令的权限
+    default: op
+  OpenTools.setspawn:
+    description: setspawn命令的权限
+    default: op
+  OpenTools.list:
+    description: list命令的权限
+    default: op
+  OpenTools.testGUI:
+    description: testGUI命令的权限
+    default: op

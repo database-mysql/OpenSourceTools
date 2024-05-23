@@ -1,0 +1,89 @@
+#服务器名字
+ServerName: "ServerName"
+
+#默认关服提示
+DefaultStopMessage: "StopServerText"
+
+#玩家进入服务器的给进服玩家的提示
+PlayerJoinSendMessage:
+    - "JoinText"
+
+#普通玩家进入服务器的全服提示
+PlayerJoinServerMessage: "&7[&f&l玩家&7]&e%PlayerName%&a进入了服务器"
+
+#普通玩家退出服务器的全服提示
+PlayerQuitServerMessage: "&7[&f&l玩家&7]&e%PlayerName%&d离开了服务器"
+
+#管理员进入服务器的全服提示
+AdminJoinServerMessage: "&7[&d&l管理员&7]&e%PlayerName%&a进入了服务器"
+
+#管理员退出服务器的全服提示
+AdminQuitServerMessage: "&7[&d&l管理员&7]&e%PlayerName%&d离开了服务器"
+
+#ColorChat设置
+ColorChatSetting:
+  #是否允许管理员使用ColorChat
+  AllowAdminUsedColorChat: true
+  #是否允许普通玩家使用ColorChat
+  AllowPlayerUsedColorChat: true
+  #在这个列表中的玩家无视上面两个开关
+  AllowPlayers:
+    - PlayrtName-1
+    - PlayerName-2
+    - PlayerName-3
+
+#ColorSignSetting设置
+ColorSignSetting:
+  #是否允许管理员使用ColorSign
+  AllowAdminUsedColorSign: true
+  #是否允许普通玩家使用ColorSign
+  AllowPlayerUsedColorSign: true
+
+#Spawn设置
+SpawnSetting:
+  #世界名称
+  WorldName: world
+  #X坐标
+  locationX: 0.5
+  #Y坐标
+  locationY: 80.0
+  #Z坐标
+  locationZ: 0.5
+
+#公告设置
+TimeMessageSetting:
+  #是否启动公告系统
+  TimeMessage: true
+  #发送公告间隔时间(单位秒)
+  TimeMessageTime: 60
+  #公告内容
+  Message:
+      - "Text-1"
+      - "Text-2"
+      - "Text-3"
+
+#Feed命令设置
+FeedCommandSetting:
+  #是否允许管理员使用Feed命令
+  AllowAdminUsedFeedCommand: true
+  #是否允许普通玩家使用Feed命令
+  AllowPlayerUsedFeedCommand: false
+
+#Heal命令设置
+HealCommandSetting:
+  #是否允许管理员使用Heal命令
+  AllowAdminUsedHealCommand: true
+  #是否允许普通玩家使用Heal命令
+  AllowPlayerUsedHealCommand: false
+
+#聊天设置
+ChatSetting:
+  #聊天延迟
+  ChatTime: 3
+
+#屏蔽词
+AntiKeyWords:
+  - xxx1
+  - xxx2
+  - xxx3
+  - .................
