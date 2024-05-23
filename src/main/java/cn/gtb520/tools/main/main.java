@@ -50,17 +50,6 @@ public final class main extends JavaPlugin implements Listener {
         } else if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             multi.GetLoggerPlus("&2已检测到PlaceholderAPI前置");
         }
-//        if (Bukkit.getPluginManager().getPlugin("ProtocolLib") == null) {
-//            multi.GetLoggerPlus("&d未安装ProtocolLib（发包前置），请安装后启动。");
-//            try {
-//                Thread.sleep(2300);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//            System.exit(0);
-//        } else if (Bukkit.getPluginManager().getPlugin("ProtocolLib") != null) {
-//            multi.GetLoggerPlus("&2已检测到ProtocolLib前置");
-//        }
 
         Bukkit.getPluginManager().registerEvents(this, this);
         new PlaceholderAPI(this).register();
