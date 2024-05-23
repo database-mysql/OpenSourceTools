@@ -28,7 +28,7 @@ ColorChatSetting:
   AllowPlayerUsedColorChat: true
   #在这个列表中的玩家无视上面两个开关
   AllowPlayers:
-    - PlayrtName-1
+    - PlayerName-1
     - PlayerName-2
     - PlayerName-3
 

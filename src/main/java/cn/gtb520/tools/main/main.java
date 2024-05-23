@@ -50,17 +50,6 @@ public final class main extends JavaPlugin implements Listener {
         } else if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             multi.GetLoggerPlus("&2已检测到PlaceholderAPI前置");
         }
-//        if (Bukkit.getPluginManager().getPlugin("ProtocolLib") == null) {
-//            multi.GetLoggerPlus("&d未安装ProtocolLib（发包前置），请安装后启动。");
-//            try {
-//                Thread.sleep(2300);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//            System.exit(0);
-//        } else if (Bukkit.getPluginManager().getPlugin("ProtocolLib") != null) {
-//            multi.GetLoggerPlus("&2已检测到ProtocolLib前置");
-//        }
 
         Bukkit.getPluginManager().registerEvents(this, this);
         new PlaceholderAPI(this).register();
@@ -98,7 +87,7 @@ public final class main extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(new PlayerReSpawn_Event(),this);
         Bukkit.getPluginManager().registerEvents(new PlayerChangedWorld_Event(),this);
 
-        Objects.requireNonNull(getCommand("CTReload")).setExecutor(new Reload_Command());
+        Objects.requireNonNull(getCommand("OSTReload")).setExecutor(new Reload_Command());
         Objects.requireNonNull(getCommand("Stop")).setExecutor(new Stop_Command());
         Objects.requireNonNull(getCommand("gamemode")).setExecutor(new gm_Command());
         Objects.requireNonNull(getCommand("gamemode")).setTabCompleter(new gm_Command());
