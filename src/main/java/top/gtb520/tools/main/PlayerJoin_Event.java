@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
@@ -11,7 +11,7 @@ public class PlayerJoin_Event implements Listener {
     @EventHandler
     public void PlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        multi.GetLoggerPlus("&e&l" + player.getName() + " IP：" + player.getAddress());
+        unity.GetLoggerPlus("&e&l" + player.getName() + " IP：" + player.getAddress());
         main.instance.getConfig().set(player.getName() + "_Temp_TpaPlayerName",null);
         main.instance.getConfig().set(player.getName() + "_Temp_Tpa",null);
         main.instance.getConfig().set(player.getName() + "_Temp_TpaTime",null);

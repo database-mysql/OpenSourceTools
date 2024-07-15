@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -12,9 +12,9 @@ public class tpaback_Command implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            Location BackLocation = multi.getLocationTempTemp(player.getName() + "_Tpa");
+            Location BackLocation = unity.getLocationTempTemp(player.getName() + "_Tpa");
             player.teleport(BackLocation);
-            player.sendMessage(multi.ColorMessage("&a传送成功!"));
+            player.sendMessage(unity.ColorMessage("&a传送成功!"));
         }
         return false;
     }

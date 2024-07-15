@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -31,7 +31,7 @@ public final class main extends JavaPlugin implements Listener {
         instance = this;
         descriptionFile = getDescription();
 
-        multi.GetLoggerPlus("\n" +
+        unity.GetLoggerPlus("\n" +
                 "   ___                 ___                      \n" +
                 "  / _ \\ _ __  ___ _ _ / __| ___ _  _ _ _ __ ___ \n" +
                 " | (_) | '_ \\/ -_) ' \\\\__ \\/ _ \\ || | '_/ _/ -_)\n" +
@@ -39,7 +39,7 @@ public final class main extends JavaPlugin implements Listener {
                 "       |_|                                      \n");
 
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") == null) {
-            multi.GetLoggerPlus("&d找不到PlaceholderAPI,请安装PlaceholderAPI后才能使用本插件");
+            unity.GetLoggerPlus("&d找不到PlaceholderAPI,请安装PlaceholderAPI后才能使用本插件");
             Bukkit.getPluginManager().disablePlugins();
             try {
                 Thread.sleep(2300);
@@ -48,7 +48,7 @@ public final class main extends JavaPlugin implements Listener {
             }
             System.exit(0);
         } else if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
-            multi.GetLoggerPlus("&2已检测到PlaceholderAPI前置");
+            unity.GetLoggerPlus("&2已检测到PlaceholderAPI前置");
         }
 
         Bukkit.getPluginManager().registerEvents(this, this);
@@ -66,16 +66,16 @@ public final class main extends JavaPlugin implements Listener {
         Folders.add(new File(getDataFolder().getPath()));
         Makedirs(Folders);
 
-        multi.GetLoggerPlus("&f-----------OpenSourceTools-----------");
+        unity.GetLoggerPlus("&f-----------OpenSourceTools-----------");
         BukkitTask TpaTime = new Tpa_Time(this).runTaskTimer(this, 0L, 20);
-        multi.SetIntTemp("TpaTimeTaskId",TpaTime.getTaskId());
+        unity.SetIntTemp("TpaTimeTaskId",TpaTime.getTaskId());
 
         BukkitTask TpaDetect = new Tpa_Detect(this).runTaskTimer(this, 0L, 60*20);
-        multi.SetIntTemp("TpaDetectTaskId",TpaDetect.getTaskId());
+        unity.SetIntTemp("TpaDetectTaskId",TpaDetect.getTaskId());
 
         if (getConfig().getBoolean("TimeMessageSetting.TimeMessage")) {
             BukkitTask TimeMessage = new TimeMessage(this).runTaskTimer(this, 0L, getConfig().getInt("TimeMessageSetting.TimeMessageTime")*20L);
-            multi.SetIntTemp("TimeMessageTaskId",TimeMessage.getTaskId());
+            unity.SetIntTemp("TimeMessageTaskId",TimeMessage.getTaskId());
         }
 
         Bukkit.getPluginManager().registerEvents(new KickGUI_ClickGUI_Event(),this);
@@ -110,18 +110,18 @@ public final class main extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("testGUI")).setExecutor(new testGUI());
         Objects.requireNonNull(getCommand("PlayerTitle")).setExecutor(new PlayerTitle_Command());
 
-        multi.GetLoggerPlus("插件启动成功");
-        multi.GetLoggerPlus("&f-----------OpenSourceTools-----------");
+        unity.GetLoggerPlus("插件启动成功");
+        unity.GetLoggerPlus("&f-----------OpenSourceTools-----------");
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
         instance = null;
-        multi.GetLoggerPlus("&f-----------OpenSourceTools-----------");
-        multi.GetLoggerPlus("插件已卸载");
-        multi.GetLoggerPlus("&f-----------OpenSourceTools-----------");
-        multi.GetLoggerPlus("\n" +
+        unity.GetLoggerPlus("&f-----------OpenSourceTools-----------");
+        unity.GetLoggerPlus("插件已卸载");
+        unity.GetLoggerPlus("&f-----------OpenSourceTools-----------");
+        unity.GetLoggerPlus("\n" +
                 "   ___                 ___                      \n" +
                 "  / _ \\ _ __  ___ _ _ / __| ___ _  _ _ _ __ ___ \n" +
                 " | (_) | '_ \\/ -_) ' \\\\__ \\/ _ \\ || | '_/ _/ -_)\n" +

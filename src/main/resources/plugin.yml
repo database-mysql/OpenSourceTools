@@ -4,8 +4,6 @@ main: top.gtb520.tools.main.main
 api-version: '1.20'
 authors: [ Open Source ]
 description: 开源工具包
-depend:
-  - PlaceholderAPI.jar
 commands:
   feed:
     aliases: [eat]
@@ -40,7 +38,7 @@ commands:
     description: 测试GUI命令
     permission: OpenTools.testGUI
     permission-message: §c§l权限不足
-  CTReload:
+  OSTReload:
     description: 重载插件
     permission: OpenTools.reload
     permission-message: §c§l权限不足
@@ -115,8 +113,8 @@ permissions:
   OpenTools.vanish:
     description: unmute命令的权限
     default: op
-  OpenTools.reload:
-    description: ctreload命令的权限
+  OpenTools.ostreload:
+    description: ostreload命令的权限
     default: op
   OpenTools.sun:
     description: sun命令的权限

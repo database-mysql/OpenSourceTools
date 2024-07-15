@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -17,13 +17,13 @@ public class PlayerTitle_Command implements TabExecutor {
         if (args.length >= 1) {
             if(sender.isOp()) {
                 if (args[0].equals("help")) {
-                    sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
-                    sender.sendMessage(multi.ColorMessage("/" + label + " help"));
-                    sender.sendMessage(multi.ColorMessage("/" + label + " addTitle <玩家ID> <称号>"));
-                    sender.sendMessage(multi.ColorMessage("/" + label + " addSuffix <玩家ID> <后缀>"));
-                    sender.sendMessage(multi.ColorMessage("/" + label + " delTitle <玩家ID>"));
-                    sender.sendMessage(multi.ColorMessage("/" + label + " delSuffix <玩家ID>"));
-                    sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
+                    sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
+                    sender.sendMessage(unity.ColorMessage("/" + label + " help"));
+                    sender.sendMessage(unity.ColorMessage("/" + label + " addTitle <玩家ID> <称号>"));
+                    sender.sendMessage(unity.ColorMessage("/" + label + " addSuffix <玩家ID> <后缀>"));
+                    sender.sendMessage(unity.ColorMessage("/" + label + " delTitle <玩家ID>"));
+                    sender.sendMessage(unity.ColorMessage("/" + label + " delSuffix <玩家ID>"));
+                    sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
                     return false;
                 }
 
@@ -32,16 +32,16 @@ public class PlayerTitle_Command implements TabExecutor {
                         String PlayerName = args[1];
                         String Title = args[2];
                         if (Bukkit.getPlayer(PlayerName) == null) {
-                            sender.sendMessage(multi.ColorMessage("&d&l这个玩家不存在或不在线"));
+                            sender.sendMessage(unity.ColorMessage("&d&l这个玩家不存在或不在线"));
                             return false;
                         }
-                        sender.sendMessage(multi.ColorMessage("&a操作成功!"));
+                        sender.sendMessage(unity.ColorMessage("&a操作成功!"));
                         main.instance.getConfig().set(PlayerName + "_Title",Title);
                         main.instance.saveConfig();
                         main.instance.reloadConfig();
                         return false;
                     }else {
-                        sender.sendMessage(multi.ColorMessage("&d&l参数错误,用法:/" + label + " addTitle <玩家ID> <称号>"));
+                        sender.sendMessage(unity.ColorMessage("&d&l参数错误,用法:/" + label + " addTitle <玩家ID> <称号>"));
                         return false;
                     }
                 }
@@ -51,16 +51,16 @@ public class PlayerTitle_Command implements TabExecutor {
                         String PlayerName = args[1];
                         String Suffix = args[2];
                         if (Bukkit.getPlayer(PlayerName) == null) {
-                            sender.sendMessage(multi.ColorMessage("&d&l这个玩家不存在或不在线"));
+                            sender.sendMessage(unity.ColorMessage("&d&l这个玩家不存在或不在线"));
                             return false;
                         }
-                        sender.sendMessage(multi.ColorMessage("&a操作成功!"));
+                        sender.sendMessage(unity.ColorMessage("&a操作成功!"));
                         main.instance.getConfig().set(PlayerName + "_Suffix",Suffix);
                         main.instance.saveConfig();
                         main.instance.reloadConfig();
                         return false;
                     }else {
-                        sender.sendMessage(multi.ColorMessage("&d&l参数错误,用法:/" + label + " addSuffix <玩家ID> <后缀>"));
+                        sender.sendMessage(unity.ColorMessage("&d&l参数错误,用法:/" + label + " addSuffix <玩家ID> <后缀>"));
                         return false;
                     }
                 }
@@ -69,16 +69,16 @@ public class PlayerTitle_Command implements TabExecutor {
                     if (args.length == 2) {
                         String PlayerName = args[1];
                         if (Bukkit.getPlayer(PlayerName) == null) {
-                            sender.sendMessage(multi.ColorMessage("&d&l这个玩家不存在或不在线"));
+                            sender.sendMessage(unity.ColorMessage("&d&l这个玩家不存在或不在线"));
                             return false;
                         }
-                        sender.sendMessage(multi.ColorMessage("&a操作成功!"));
+                        sender.sendMessage(unity.ColorMessage("&a操作成功!"));
                         main.instance.getConfig().set(PlayerName + "_Title",null);
                         main.instance.saveConfig();
                         main.instance.reloadConfig();
                         return false;
                     }else {
-                        sender.sendMessage(multi.ColorMessage("&d&l参数错误,用法:/" + label + " delTitle <玩家ID>"));
+                        sender.sendMessage(unity.ColorMessage("&d&l参数错误,用法:/" + label + " delTitle <玩家ID>"));
                         return false;
                     }
                 }
@@ -87,37 +87,37 @@ public class PlayerTitle_Command implements TabExecutor {
                     if (args.length == 2) {
                         String PlayerName = args[1];
                         if (Bukkit.getPlayer(PlayerName) == null) {
-                            sender.sendMessage(multi.ColorMessage("&d&l这个玩家不存在或不在线"));
+                            sender.sendMessage(unity.ColorMessage("&d&l这个玩家不存在或不在线"));
                             return false;
                         }
-                        sender.sendMessage(multi.ColorMessage("&a操作成功!"));
+                        sender.sendMessage(unity.ColorMessage("&a操作成功!"));
                         main.instance.getConfig().set(PlayerName + "_Suffix",null);
                         main.instance.saveConfig();
                         main.instance.reloadConfig();
                         return false;
                     }else {
-                        sender.sendMessage(multi.ColorMessage("&d&l参数错误,用法:/" + label + " delSuffix <玩家ID>"));
+                        sender.sendMessage(unity.ColorMessage("&d&l参数错误,用法:/" + label + " delSuffix <玩家ID>"));
                         return false;
                     }
                 }
 
-                sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
-                sender.sendMessage(multi.ColorMessage("/" + label + " help"));
-                sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
+                sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
+                sender.sendMessage(unity.ColorMessage("/" + label + " help"));
+                sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
             }
         }else {
             if (sender.isOp()) {
-                sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
-                sender.sendMessage(multi.ColorMessage("/" + label + " help"));
-                sender.sendMessage(multi.ColorMessage("/" + label + " addTitle <玩家ID> <称号>"));
-                sender.sendMessage(multi.ColorMessage("/" + label + " addSuffix <玩家ID> <后缀>"));
-                sender.sendMessage(multi.ColorMessage("/" + label + " delTitle <玩家ID>"));
-                sender.sendMessage(multi.ColorMessage("/" + label + " delSuffix <玩家ID>"));
-                sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
+                sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
+                sender.sendMessage(unity.ColorMessage("/" + label + " help"));
+                sender.sendMessage(unity.ColorMessage("/" + label + " addTitle <玩家ID> <称号>"));
+                sender.sendMessage(unity.ColorMessage("/" + label + " addSuffix <玩家ID> <后缀>"));
+                sender.sendMessage(unity.ColorMessage("/" + label + " delTitle <玩家ID>"));
+                sender.sendMessage(unity.ColorMessage("/" + label + " delSuffix <玩家ID>"));
+                sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
             }else {
-                sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
-                sender.sendMessage(multi.ColorMessage("/" + label + " help"));
-                sender.sendMessage(multi.ColorMessage("&7---------------&6橙式称号系统&7---------------"));
+                sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
+                sender.sendMessage(unity.ColorMessage("/" + label + " help"));
+                sender.sendMessage(unity.ColorMessage("&7---------------&dOpenSourceTitleSystem&7---------------"));
             }
         }
         return false;

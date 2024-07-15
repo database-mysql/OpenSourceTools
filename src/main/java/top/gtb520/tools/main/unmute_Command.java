@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -33,7 +33,7 @@ public class unmute_Command implements CommandExecutor {
                     if (MutePlayers.equals(Objects.requireNonNull(player).getName())) {
                         MutePlayerList.remove(Objects.requireNonNull(player).getName());
                         main.instance.getConfig().set("MutePlayerList", MutePlayerList);
-                        multi.SaveAndReloadConfig();
+                        unity.SaveAndReloadConfig();
                         sender.sendMessage(ChatColor.GREEN + "你解除了 " + player.getName() + " 的禁言");
                         player.sendMessage(ChatColor.RED + "你被 " + senderPlayer.getName() + " 解除禁言了!");
                         return false;
@@ -58,7 +58,7 @@ public class unmute_Command implements CommandExecutor {
                     if (MutePlayers.equals(Objects.requireNonNull(player).getName())) {
                         MutePlayerList.add(Objects.requireNonNull(player).getName());
                         main.instance.getConfig().set("MutePlayerList", MutePlayerList);
-                        multi.SaveAndReloadConfig();
+                        unity.SaveAndReloadConfig();
                         sender.sendMessage(ChatColor.GREEN + "你解除了 控制台 的禁言");
                         player.sendMessage(ChatColor.RED + "你被 控制台 解除禁言了!");
                         return false;

@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
@@ -36,14 +36,14 @@ public class PlaceholderAPI extends PlaceholderExpansion {
             if (main.instance.getConfig().getString(player.getName() + "_Title") == null) {
                 return "";
             } else {
-                return multi.ColorMessage("&7[" + main.instance.getConfig().getString(player.getName() + "_Title") + "&7]&f");
+                return unity.ColorMessage("&7[" + main.instance.getConfig().getString(player.getName() + "_Title") + "&7]&f");
             }
         }
         if (params.equalsIgnoreCase("Suffix")) {
             if (main.instance.getConfig().getString(player.getName() + "_Suffix") == null) {
                 return "";
             } else {
-                return multi.ColorMessage("&7[" + main.instance.getConfig().getString(player.getName() + "_Suffix") + "&7]");
+                return unity.ColorMessage("&7[" + main.instance.getConfig().getString(player.getName() + "_Suffix") + "&7]");
             }
         }
         return null;

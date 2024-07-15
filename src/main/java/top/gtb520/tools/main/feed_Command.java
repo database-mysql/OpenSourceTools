@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import static cn.gtb520.tools.main.main.instance;
+import static top.gtb520.tools.main.main.instance;
 
 public class feed_Command implements CommandExecutor {
     @Override

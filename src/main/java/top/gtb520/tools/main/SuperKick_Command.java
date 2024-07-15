@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -65,7 +65,7 @@ public class SuperKick_Command implements CommandExecutor {
         }
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            multi.KickGui(player);
+            unity.KickGui(player);
         }else {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&a正确用法&f: /kick &f<&e玩家ID&f> &f[&e理由&f]"));
         }

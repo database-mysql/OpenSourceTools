@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -18,17 +18,17 @@ public class PlayerChat_Event implements Listener {
         String Message = event.getMessage();
         if (player.isOp()) {
             if (main.instance.getConfig().getBoolean("ColorChatSetting.AllowAdminUsedColorChat")) {
-                event.setMessage(multi.ColorMessage(Message));
+                event.setMessage(unity.ColorMessage(Message));
             }
         }else {
             if (main.instance.getConfig().getBoolean("ColorChatSetting.AllowPlayerUsedColorChat")) {
-                event.setMessage(multi.ColorMessage(Message));
+                event.setMessage(unity.ColorMessage(Message));
             }
         }
 
         for (String ColorChatPlayers : main.instance.getConfig().getStringList("ColorChatSetting.AllowPlayers")) {
             if (player.getName().equals(ColorChatPlayers)) {
-                event.setMessage(multi.ColorMessage(Message));
+                event.setMessage(unity.ColorMessage(Message));
             }
         }
 
@@ -49,19 +49,19 @@ public class PlayerChat_Event implements Listener {
         }
 
         // 建议多线程处理。
-        if (Objects.equals(multi.getStringTemp(player.getName() + "_Message"), Message)) {
-            player.sendMessage(multi.ColorMessage("&d&l请不要刷屏！"));
+        if (Objects.equals(unity.getStringTemp(player.getName() + "_Message"), Message)) {
+            player.sendMessage(unity.ColorMessage("&d&l请不要刷屏！"));
             event.setCancelled(true);
             return;
         }
 
-        if (multi.GetIntTemp(player.getName() + "_ChatTime") != null) {
-            player.sendMessage(multi.ColorMessage("&e&l您发送消息太快了,请在" + multi.GetIntTemp(player.getName() + "_ChatTime") + "后发送"));
+        if (unity.GetIntTemp(player.getName() + "_ChatTime") != null) {
+            player.sendMessage(unity.ColorMessage("&e&l您发送消息太快了,请在" + unity.GetIntTemp(player.getName() + "_ChatTime") + "后发送"));
             event.setCancelled(true);
             return;
         }
 
-        multi.SetStringTemp(player.getName() + "_Message", Message);
-        multi.SetIntTemp(player.getName() + "_ChatTime", main.instance.getConfig().getInt("ChatSetting.ChatTime"));
+        unity.SetStringTemp(player.getName() + "_Message", Message);
+        unity.SetIntTemp(player.getName() + "_ChatTime", main.instance.getConfig().getInt("ChatSetting.ChatTime"));
     }
 }

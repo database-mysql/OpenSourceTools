@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -9,6 +9,6 @@ public class PlayerDeath_Event implements Listener {
     @EventHandler
     public void On_Event(PlayerDeathEvent event) {
         Player player = event.getEntity();
-        multi.SetLocationTempTemp(player.getName() + "_Back",player.getLocation());
+        unity.SetLocationTempTemp(player.getName() + "_Back",player.getLocation());
     }
 }

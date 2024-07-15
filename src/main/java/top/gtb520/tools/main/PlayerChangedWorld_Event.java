@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,7 +10,7 @@ public class PlayerChangedWorld_Event implements Listener {
     public void On_Event(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
         if (player.hasPermission("OpenSourceTools.FLY")) {
-            if (multi.getStringTemp(player.getName() + "_Fly").equals("已开启")) {
+            if (unity.getStringTemp(player.getName() + "_Fly").equals("已开启")) {
                 player.setAllowFlight(true);
             }
         }

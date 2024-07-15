@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;

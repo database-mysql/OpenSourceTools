@@ -1,4 +1,4 @@
-package cn.gtb520.tools.main;
+package top.gtb520.tools.main;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -47,7 +47,7 @@ public class mute_Command implements CommandExecutor {
 
                 MutePlayerList.add(Objects.requireNonNull(player).getName());
                 main.instance.getConfig().set("MutePlayerList", MutePlayerList);
-                multi.SaveAndReloadConfig();
+                unity.SaveAndReloadConfig();
                 sender.sendMessage(ChatColor.GREEN + "你禁言了" + player.getName());
                 player.sendMessage(ChatColor.RED + "你被 " + senderPlayer.getName() + " 禁言了!");
                 return false;
@@ -74,7 +74,7 @@ public class mute_Command implements CommandExecutor {
 
                 MutePlayerList.add(Objects.requireNonNull(player).getName());
                 main.instance.getConfig().set("MutePlayerList", MutePlayerList);
-                multi.SaveAndReloadConfig();
+                unity.SaveAndReloadConfig();
                 sender.sendMessage(ChatColor.GREEN + "你禁言了" + player.getName());
                 player.sendMessage(ChatColor.RED + "你被 控制台 禁言了!");
                 return false;
