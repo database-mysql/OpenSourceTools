@@ -1,6 +1,6 @@
 name: OpenSourceTools
 version: '${project.version}'
-main: cn.gtb520.tools.main.main
+main: top.gtb520.tools.main.main
 api-version: '1.20'
 authors: [ Open Source ]
 description: 开源工具包
